@@ -36,14 +36,14 @@ $(window).resize(function() {
             $(".hero-text #2").html("StuAgainstSlep");
             $(".hero-text h2").html("CHANGELOG");
             $(".hero-text #1").css("font-size", "50px");
-            $(".hero-text #2").css("font-size", "50px");       
-        }
-        else if (width <= 600) {
-            $(".hero-text #1").html("[SAS]");
-            $(".hero-text #2").html("[SAS]");
-            $(".hero-text h2").html("CHANGELOG");
-            $(".hero-text #1").css("font-size", "50px");
             $(".hero-text #2").css("font-size", "50px");
+            if (width <= 600) {
+                $(".hero-text #1").html("[SAS]");
+                $(".hero-text #2").html("[SAS]");
+                $(".hero-text h2").html("CHANGELOG");
+                $(".hero-text #1").css("font-size", "50px");
+                $(".hero-text #2").css("font-size", "50px");  
+            }
         }
         else {     
             $(".hero-text #1").html("StudentAgainstSleep");
