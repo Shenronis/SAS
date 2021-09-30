@@ -31,8 +31,8 @@ $(document).ready(function () {
         $(".articles .box").css("padding", "10%");
 
         var userAgent = window.navigator.userAgent.toLowerCase(),
-        var safari = /safari/.test( userAgent ),
-        var ios = /iphone|ipod|ipad/.test( userAgent );
+        safari = /safari/.test( userAgent ),
+        ios = /iphone|ipod|ipad/.test( userAgent );
 
         if( ios ) {
             if ( !safari ) {
