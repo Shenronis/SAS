@@ -43,21 +43,27 @@ $(document).ready(function () {
 
 $(window).resize(function() {
     var width = $( window ).width();
-    if (width <= 1060) {
-
+    if (width <= 1200) {
         if (width <= 800) {
-            $(".hero-text #1").html("[SAS]");
-            $(".hero-text #2").html("[SAS]");
+            $(".hero-text #1").html("StuAgainstSlep");
+            $(".hero-text #2").html("StuAgainstSlep");
             $(".hero-text h2").html("CHANGELOG");
             $(".hero-text #1").css("font-size", "50px");
             $(".hero-text #2").css("font-size", "50px");
+            if (width <= 600) {
+                $(".hero-text #1").html("[SAS]");
+                $(".hero-text #2").html("[SAS]");
+                $(".hero-text h2").html("CHANGELOG");
+                $(".hero-text #1").css("font-size", "50px");
+                $(".hero-text #2").css("font-size", "50px");  
+            }
         }
-        else {
+        else {     
             $(".hero-text #1").html("StudentAgainstSleep");
             $(".hero-text #2").html("StudentAgainstSleep");
             $(".hero-text h2").html("CHANGELOG");
             $(".hero-text #1").css("font-size", "70px");
-            $(".hero-text #2").css("font-size", "70px");
+            $(".hero-text #2").css("font-size", "70px");     
         }
     }
     else {
