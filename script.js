@@ -119,7 +119,6 @@ function search() {
     if (!found) {
         $('#404').show();
         $('#404 .header').html(date);
-        $('#404 .sub-title').html("[No Changelog]");
     }
     else {
         $('#404').hide();
