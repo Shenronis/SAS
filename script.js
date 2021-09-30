@@ -32,15 +32,15 @@ $(window).resize(function() {
     var width = $( window ).width();
     if (width <= 1200) {
         if (width <= 800) {
-            $(".hero-text #1").html("[SAS]");
-            $(".hero-text #2").html("[SAS]");
-            $(".hero-text h2").html("CHANGELOG");
-            $(".hero-text #1").css("font-size", "50px");
-            $(".hero-text #2").css("font-size", "50px");
-        }
-        else if (width <= 600) {
             $(".hero-text #1").html("StuAgainstSlep");
             $(".hero-text #2").html("StuAgainstSlep");
+            $(".hero-text h2").html("CHANGELOG");
+            $(".hero-text #1").css("font-size", "50px");
+            $(".hero-text #2").css("font-size", "50px");       
+        }
+        else if (width <= 600) {
+            $(".hero-text #1").html("[SAS]");
+            $(".hero-text #2").html("[SAS]");
             $(".hero-text h2").html("CHANGELOG");
             $(".hero-text #1").css("font-size", "50px");
             $(".hero-text #2").css("font-size", "50px");
