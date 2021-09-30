@@ -188,6 +188,6 @@ h2::before{
 ul { padding: 12px; list-style:none; }
 li:before {    
     content: '👉';
-    font-size: 0.5em;
+    font-size: 1em;
     margin:0 5px 0 -15px;
 }
