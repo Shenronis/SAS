@@ -72,7 +72,7 @@ button:hover {
 .articles {
     display: none;
     padding: 5vh;
-    color: rgb(190, 190, 190);
+    color: #eee;
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 .articles .box {
@@ -103,13 +103,33 @@ button:hover {
 .articles .sub-title {
     font-size: 1.2em;
     margin-top: 12px;
-    color: lightslategrey;
+    color: rgb(150, 150, 150);
 }
 .articles .context {
     font-size: 1em;
-    color: rgb(160, 160, 160);
+    color: rgb(190, 190, 190);
     padding-left: 2vh;
     padding-top: 1vh;
+}
+.articles .context a {
+    color: chocolate;
+}
+.articles .context sp {
+    color: chocolate;
+}
+.articles .context sp::before,
+.articles .context a::before {
+    content:"[";
+}
+.articles .context sp::after,
+.articles .context a::after {
+    content:"]";
+}
+.articles .context egg {
+    color: grey;
+}
+.articles .context egg::before {
+    content:"e.g. ";
 }
 .articles a.anchor {
     display: block;
@@ -177,8 +197,15 @@ h2::before{
 }
 
 ul { padding: 12px; list-style:none; }
+li {
+    margin-bottom: 0.5em;
+}
 li:before {    
     content: '👉';
-    font-size: 0.5px;
+    font-size: 1em;
     margin:0 5px 0 -15px;
+}
+li:after {    
+    content: '.';
+    color: #eee;
 }
