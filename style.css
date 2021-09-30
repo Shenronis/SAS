@@ -146,6 +146,9 @@ body, html {
     top: -180px;
     visibility: hidden;
 }
+.articles .context none {
+    color: grey;
+}
 /*---== Article End ==-- */
 
 h1 {

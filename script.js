@@ -7,7 +7,7 @@ $(document).ready(function () {
     $('.context').each(function() {
         console.log($(this).prop("innerHTML"));
         if (isBlank($(this).html()) || $(this).html() == "") {
-            $(this).html("<ul><li>None</li></ul>");
+            $(this).html("<ul><li><none>None</none></li></ul>");
         }
     });
 
