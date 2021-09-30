@@ -27,7 +27,7 @@ $(document).ready(function () {
         $(".hero-text #2").css("font-size", "50px");
 
         $(".articles").css("font-size", "100%");
-        $(".articles").css("padding", "10%");
+        $(".articles").css("padding", "5%");
         $(".articles .box").css("padding", "10%");
         $("li").css("margin-bottom", "5em");
     }
