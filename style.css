@@ -9,19 +9,14 @@ h2{text-align: center; color: #2079df; font-size: 28px; float: left; width: 100%
 h2:before{content: ""; position: absolute; left: 50%; bottom: 0; width: 100px; height: 2px; background-color: #2079df; margin-left: -50px;}
 /*= Reset CSS End
 ================= */
-
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-    display: none;
-    -webkit-appearance: none;
-}
-
 body, html {
     cursor: default ;
     height: 100%;
     background-color: black;
 }
 
+
+/*--== Header ==--*/
 .hero-text {
     margin: 0;
     max-width: 5000px;
@@ -30,7 +25,60 @@ body, html {
     height: 250px;
     overflow: hidden;
 }
+.hero-text h1 {
+    position: relative;
+    font-family: 'Exo', sans-serif;
+    font-size: 5em;
+    margin: 0;
+    transform: skew(-15deg);
+    letter-spacing: 0.03em;
+}
+.hero-text h1::after {
+    content: '';
+    position: absolute;
+    top: -0.1em;
+    right: 0.05em;
+    width: 0.4em;
+    height: 0.4em;
+    background: 
+      radial-gradient(white 3%, rgba(white, 0.3) 15%, rgba(white, 0.05) 60%, transparent 80%),
+      radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 5% 100%,
+      radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 70% 5%;
+    background-repeat: no-repeat;
+} 
+.hero-text h1 span:first-child {
+    display: block;
+    text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black,  0 0 0.1em #165ff3;
+    -webkit-text-stroke: 0.06em rgba(black, 0.5);
+}
+.hero-text h1 span:last-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(#032d50 25%, #004a6e 35%, #3848a1 35%, #360a9b 50%, #8313e7 55%, #ff61af 75%);
+    background-clip: text;
+    -webkit-text-stroke: 0.01em #94a0b9;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-text h2 {
+    display: inline;
+    font-family: 'Mr Dafoe', cursive;
+    margin: 0;
+    font-size: 3.5em;
+    margin-top: -0.2em;
+    left:0;
+    color: white;
+    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+    transform: rotate(-7deg);
+    text-decoration:none;
+}
+.hero-text h2::before{
+    content: none;
+}
+/*--== Header End ==--*/
 
+/*--== Search ==--*/
 .search-wrapper {
     position: relative;
     display:flex;
@@ -38,7 +86,6 @@ body, html {
     align-items: center;
     padding-left: 5vh;
 }
-
 .search-wrapper input {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
@@ -51,7 +98,11 @@ body, html {
     border-style:solid;
     border-radius: 4px;
 }
-
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
 .search-wrapper button {
     background-color: #fff;
     border-radius: 2px;
@@ -61,7 +112,6 @@ body, html {
     height: 32px;
     transition: background-color 0.3s ease-in-out;
 }
-
 @media(hover: hover) and (pointer: fine) {
     .search-wrapper button:hover {
         background-color: rgb(0, 0, 0);
@@ -71,11 +121,11 @@ body, html {
         box-shadow: 0px 0px 2px #fff !important;
     }
 }
-
 .search-wrapper button:active {
         background-color: rgb(0, 0, 0);
         color:white;
 }
+/*--== Search End==--*/
 
 /*---== Article ==-- */
 .articles {
@@ -94,10 +144,12 @@ body, html {
 .articles .header {
     display:inline;
     font-size: 2em;
+    font-weight: bold;
     font-style: italic;
     margin-bottom: 20px;
     display:flex;
     align-items: center;
+    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
 }
 .articles .header .quicklink {
     background-color: white;
@@ -121,10 +173,12 @@ body, html {
     padding-top: 1vh;
 }
 .articles .context a {
-    color: chocolate;
+    color: white;
+    text-shadow: 0 0 0.025em #fff, 0 0 0.2em #0547fe, 0 0 0.3em #05ccfe;
 }
 .articles .context sp {
-    color: chocolate;
+    color: white;
+    text-shadow: 0 0 0.025em #fff, 0 0 0.2em #0547fe, 0 0 0.3em #05ccfe;
 }
 .articles .context sp::before,
 .articles .context a::before {
@@ -149,75 +203,21 @@ body, html {
 .articles .context none {
     color: grey;
 }
-/*---== Article End ==-- */
-
-h1 {
-    position: relative;
-    font-family: 'Exo', sans-serif;
-    font-size: 5em;
-    margin: 0;
-    transform: skew(-15deg);
-    letter-spacing: 0.03em;
+.articles .context ul {
+    padding: 12px; 
+    list-style:none; 
 }
-
-h1::after {
-    content: '';
-    position: absolute;
-    top: -0.1em;
-    right: 0.05em;
-    width: 0.4em;
-    height: 0.4em;
-    background: 
-      radial-gradient(white 3%, rgba(white, 0.3) 15%, rgba(white, 0.05) 60%, transparent 80%),
-      radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 5% 100%,
-      radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 70% 5%;
-    background-repeat: no-repeat;
-}
-  
-h1 span:first-child {
-    display: block;
-    text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black,  0 0 0.1em #165ff3;
-    -webkit-text-stroke: 0.06em rgba(black, 0.5);
-}
-
-h1 span:last-child {
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: linear-gradient(#032d50 25%, #004a6e 35%, #3848a1 35%, #360a9b 50%, #8313e7 55%, #ff61af 75%);
-    background-clip: text;
-    -webkit-text-stroke: 0.01em #94a0b9;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-h2 {
-    display: inline;
-    font-family: 'Mr Dafoe', cursive;
-    margin: 0;
-    font-size: 3.5em;
-    margin-top: -0.2em;
-    left:0;
-    color: white;
-    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
-    transform: rotate(-7deg);
-    text-decoration:none;
-}
-
-h2::before{
-    content: none;
-}
-
-ul { padding: 12px; list-style:none; }
-li {
+.articles .context ul>li {
     margin-bottom: 0.5em;
 }
-li:before {    
+.articles .context ul>li:before {    
     content: '👉';
     font-size: 1em;
     margin:0 5px 0 -15px;
 }
-li:after {    
+.articles .context ul>li:after {    
     content: '.';
     color: rgb(190, 190, 190);
 }
+/*---== Article End ==-- */
+
