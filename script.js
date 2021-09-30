@@ -7,10 +7,9 @@ $(document).ready(function () {
     $('.context').each(function() {
         console.log($(this).prop("innerHTML"));
         if (isBlank($(this).html()) || $(this).html() == "") {
-            $(this).html("None");
+            $(this).html("<ul><li>None</li></ul>");
         }
     });
-
 
     $('#datePicker').on('input',function(e){
         search()
