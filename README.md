@@ -1,7 +1,6 @@
-#FiveM SAS RP Server changelog
+# FiveM SAS RP Server changelog
 
-First website, first job, yes everything is new to me. 
+### First website, first job, yes everything is new to me. 
+### This website will futher be developed.
 
-This website will futher be developed
-
-###Thanks for visiting!
+##### Thanks for visiting!
