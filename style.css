@@ -166,6 +166,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 12px;
     color: rgb(150, 150, 150);
 }
+.articles .sub-title nolog {
+    color:white;
+    text-shadow: 0 0 0.05em #fff, 0 0 0.3em #fe3f05, 0 0 0.6em #fe0505;
+}
 .articles .context {
     font-size: 1em;
     color: rgb(190, 190, 190);
