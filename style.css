@@ -59,7 +59,7 @@ body, html {
     margin-left: 12px;
     width: 80px;
     height: 32px;
-    transition: all 0.3s ease-in-out;
+    transition: background-color .2s ease-out;
 }
 
 @media(hover: hover) and (pointer: fine) {
