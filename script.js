@@ -30,6 +30,15 @@ $(document).ready(function () {
         $(".articles").css("padding", "5%");
         $(".articles .box").css("padding", "10%");
 
+        var userAgent = window.navigator.userAgent.toLowerCase(),
+        var safari = /safari/.test( userAgent ),
+        var ios = /iphone|ipod|ipad/.test( userAgent );
+
+        if( ios ) {
+            if ( !safari ) {
+                $("li").css("margin-bottom", "-2.5em");
+            };
+        }
     }
     else{
         $(".hero-text #1").html("Student Against Sleep");
