@@ -36,7 +36,7 @@ $(document).ready(function () {
 
         if( ios ) {
             if ( !safari ) {
-                $("li").css("margin-bottom", "0em");
+                $("li").css("margin-bottom", "1em");
             };
         }
     }
