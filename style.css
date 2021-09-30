@@ -1,0 +1,184 @@
+/*= Reset CSS 
+============= */
+html, body {border: 0; margin: 0; padding: 0;}
+body {font: 14px "Lato", Arial, sans-serif; min-width: 100%; min-height: 100%; color: #666;}
+.container{margin: 0 auto; max-width: 1200px;}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+.row{float: left; width: 100%; padding: 20px 0 50px;}
+h2{text-align: center; color: #2079df; font-size: 28px; float: left; width: 100%; margin: 30px 0; position: relative; line-height: 58px; font-weight: 400;}
+h2:before{content: ""; position: absolute; left: 50%; bottom: 0; width: 100px; height: 2px; background-color: #2079df; margin-left: -50px;}
+/*= Reset CSS End
+================= */
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+body, html {
+    cursor: default ;
+    height: 100%;
+    background-color: black;
+}
+
+.hero-text {
+    margin: 0;
+    max-width: 5000px;
+    padding: 32px 32px 32px 5vh;
+    padding-left: 5vh;
+    height: 250px;
+    overflow: hidden;
+}
+
+.search-wrapper {
+    position: relative;
+    display:flex;
+    width: 100%;
+    align-items: center;
+    padding-left: 5vh;
+}
+
+.search-wrapper input {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    width: 120px;
+    background-color: white;
+    color:black;
+    box-shadow: 0;
+    border: 2px #fff;
+    border-style:solid;
+    border-radius: 4px;
+}
+
+.search-wrapper button {
+    background-color: #fff;
+    border-radius: 2px;
+    border: 0px;
+    margin-left: 12px;
+    width: 80px;
+    height: 32px;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: rgb(0, 0, 0);
+    color:white;
+    box-shadow: 0px 0px 2px #fff;
+}
+
+/*---== Article ==-- */
+.articles {
+    display: none;
+    padding: 5vh;
+    color: rgb(190, 190, 190);
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.articles .box {
+    background-color: #ffffff15;
+    padding: 5vh;
+    width: 100%;
+    margin: 0;
+    border-radius: 12px;
+}
+.articles .header {
+    display:inline;
+    font-size: 2em;
+    font-style: italic;
+    margin-bottom: 20px;
+    display:flex;
+    align-items: center;
+}
+.articles .header .quicklink {
+    background-color: white;
+    color: black;
+    margin: 0 12px 0;
+    height: 24px;
+    width: auto;
+    padding: 2px 12px 2px 12px;
+    border-radius: 4px;
+    border: 0px;
+}
+.articles .sub-title {
+    font-size: 1.2em;
+    margin-top: 12px;
+    color: lightslategrey;
+}
+.articles .context {
+    font-size: 1em;
+    color: rgb(160, 160, 160);
+    padding-left: 2vh;
+    padding-top: 1vh;
+}
+.articles a.anchor {
+    display: block;
+    position: relative;
+    top: -180px;
+    visibility: hidden;
+}
+/*---== Article End ==-- */
+
+h1 {
+    position: relative;
+    font-family: 'Exo', sans-serif;
+    font-size: 5em;
+    margin: 0;
+    transform: skew(-15deg);
+    letter-spacing: 0.03em;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    top: -0.1em;
+    right: 0.05em;
+    width: 0.4em;
+    height: 0.4em;
+    background: 
+      radial-gradient(white 3%, rgba(white, 0.3) 15%, rgba(white, 0.05) 60%, transparent 80%),
+      radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 5% 100%,
+      radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 70% 5%;
+    background-repeat: no-repeat;
+}
+  
+h1 span:first-child {
+    display: block;
+    text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black,  0 0 0.1em #165ff3;
+    -webkit-text-stroke: 0.06em rgba(black, 0.5);
+}
+
+h1 span:last-child {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(#032d50 25%, #004a6e 35%, #3848a1 35%, #360a9b 50%, #8313e7 55%, #ff61af 75%);
+    background-clip: text;
+    -webkit-text-stroke: 0.01em #94a0b9;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    display: inline;
+    font-family: 'Mr Dafoe', cursive;
+    margin: 0;
+    font-size: 3.5em;
+    margin-top: -0.2em;
+    left:0;
+    color: white;
+    text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+    transform: rotate(-7deg);
+    text-decoration:none;
+}
+
+h2::before{
+    content: none;
+}
+
+ul { padding: 12px; list-style:none; }
+li:before {    
+    content: '👉';
+    font-size: 0.5px;
+    margin:0 5px 0 -15px;
+}

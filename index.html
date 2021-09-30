@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>[SAS] Changelog</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="hero-text">
+            <h1>
+                <span id="1">Student Against Sleep</span>
+                <span id="2">Student Against Sleep</span>
+            </h1>
+            <h2>CHANGELOGGG</h2>
+        </div>
+        <span class="search-wrapper">
+            <input id="datePicker" type="date">
+            <button id="search" onclick="showall()">Show all</button>
+            <script>
+                var today = new Date();
+                var dd = String(today.getDate()).padStart(2, '0');
+                var mm = String(today.getMonth() + 1).padStart(2, '0');
+                var yyyy = today.getFullYear();
+                today = yyyy + '-' + mm + '-' + dd;
+                document.getElementById("datePicker").value = today;
+            </script>
+        </span>
+
+        <!-- V BLOG HERE V -->
+
+        <article id="2021-09-30" class="articles">
+            <div class="box">
+                <article>
+                    <div class="header"></div>
+
+                    <div class="sub-title" >[THÊM]</div>
+                    <div class="context">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, ullam? Cumque accusamus temporibus quibusdam quod sunt ducimus, dolore corporis modi.
+                        <ul>
+                            <li>Đã thêm changelog</li>
+                        </ul>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti nostrum vitae veniam enim possimus voluptatem laudantium tempora animi voluptate nemo!                    
+                    </div>
+                    <br>
+
+                    <div class="sub-title" >[THAY ĐỔI]</div>
+                    <div class="context">
+                                          
+                    </div>
+                    <br>
+
+                    <div class="sub-title" >[CÂN NHẮC]</div>
+                    <div class="context">
+                                           
+                    </div>
+                    <br>
+
+                    <div class="sub-title" >[ĐÃ BỎ]</div>
+                    <div class="context">
+                                           
+                    </div>
+                    <br>
+
+                    <div class="sub-title" >[FIX BUG]</div>
+                    <div class="context">
+                        
+                    </div>
+                    <br>
+                </article>
+            </div>
+        </article>
+
+        <!-- ^ END BLOG ^ -->
+
+        <article id="404" class="articles">
+            <div class="box">
+                <article>
+                    <div class="header"></div>
+                        <div class="sub-title"></div>
+                        <div class="context"></div>  
+                    </div>
+                    <br>
+                </article>
+            </div>
+        </article>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
