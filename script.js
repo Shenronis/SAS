@@ -29,7 +29,7 @@ $(document).ready(function () {
         $(".articles").css("font-size", "100%");
         $(".articles").css("padding", "5%");
         $(".articles .box").css("padding", "10%");
-        $("li").css("margin-bottom", "5em");
+        $("li").css("margin-bottom", "1.5em");
     }
     else{
         $(".hero-text #1").html("Student Against Sleep");
