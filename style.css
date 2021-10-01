@@ -225,3 +225,23 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 /*---== Article End ==-- */
 
+/*--== Modal ==--*/
+.disable-scroll {
+    overflow: hidden;
+}
+.bg-modal {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bg-modal .modal-content {
+    width: 50rem;
+    height: 25rem;
+    background-color: lightgrey;
+    border-radius: 6px;
+}
