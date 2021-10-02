@@ -23,17 +23,85 @@
         <span class="search-wrapper">
             <input id="datePicker" type="date">
             <button id="search" onclick="showall()">Show all</button>
-            <script>
-                var today = new Date();
-                var dd = String(today.getDate()).padStart(2, '0');
-                var mm = String(today.getMonth() + 1).padStart(2, '0');
-                var yyyy = today.getFullYear();
-                today = yyyy + '-' + mm + '-' + dd;
-                document.getElementById("datePicker").value = today;
-            </script>
         </span>
 
         <!-- V BLOG HERE V -->
+        <article id="2021-10-02" class="articles">
+            <div class="box">
+                <article>
+                    <div class="header"></div>
+        
+                    <div class="sub-title" >[THÊM]</div>
+                    <div class="context">
+                        <ul>
+                            <li>Đã thêm <a>vSync</a></li>
+                            <li>Đã thêm <a>CTF</a> cướp cờ chia team random và set cờ random, script này demo chưa hoàn chỉnh, chưa có lệnh bắt đầu hay dừng game</li>
+                            <li>Đã thêm <a>rkl_clothing</a>, script này không tương thích với <a>esx_inventoryhud</a> mình đang sử dụng cho server 😨😨 em đang cố chỉnh lại</li>
+                        </ul>
+                    </div>
+                    <br>
+        
+                    <div class="sub-title" >[THAY ĐỔI]</div>
+                    <div class="context">
+                        <ul>
+                            <li>Đã thêm cột skin_inventory trong bảng users vào database (dự định là lưu đồ mặc=>item ở cột này)</li>
+                            <li>Các giao diện cửa hàng được thay bằng <a>esx_inventoryhud</a></li>
+                            <li>Kiểm tra limit khi nhặt đồ</li>
+                            <li>Kiểm tra limit khi mua đồ</li>
+                            <li>Kiểm tra limit khi craft đồ</li>
+                            <li>Kiểm tra limit khi mod dùng lệnh /addinventoryitem</li>
+                            <li>Phòng thay đồ ở <a>renzu_jobs</a> giờ sẽ sử dụng giao diện như các tiệm quần áo</li>
+                        </ul>
+                    </div>
+                    <br>
+        
+                    <div class="sub-title" >[WIP]</div>
+                    <div class="context">
+                        <ul>
+                            <li>Lưu thông tin đồ mặc=>item vào cột skin_inventory để chuyển thành item</li>
+                            <li>Chống spam drop item/pickup</li>
+                            <li>Thêm chỗ hiện sức chứa của người chơi vào <a>esx_inventoryhud</a> <egg>weight</egg></li>
+                            <li>Thay kho của công việc trong <a>renzu_jobs</a> bằng <a>esx_inventoryhud</a></li>
+                        </ul>
+                    </div>
+                    <br>
+        
+                    <div class="sub-title" >[CÂN NHẮC]</div>
+                    <div class="context">
+                        <ul>
+                            <li>Hạn chế đồ mặc theo công việc tương ứng cho phòng thay đồ <egg>chỉ được chọn những đồ mặc của công việc</egg></li>
+                            <li>Lưu preset đồ</li>
+                            <li>Dựng web thông minh hơn 😢</li>
+                        </ul>
+                    </div>
+                    <br>
+        
+                    <div class="sub-title" >[ĐÃ BỎ]</div>
+                    <div class="context">
+
+                    </div>
+                    <br>
+        
+                    <div class="sub-title" >[BUG]</div>
+                    <div class="context">
+
+                    </div>
+                    <br>
+        
+                    <div class="sub-title" >[FIXED BUG]</div>
+                    <div class="context">
+                        <ul>
+                            <li>Đã bỏ tên của bản thân ra khỏi bàn chỉ huy trong <a>renzu_jobs</a></li>
+                            <li>Đã thêm xóa phương tiện khi người chơi thoát game trong lúc đang sử dụng Test Drive <a>renzu_vehicleshop</a></li>
+                            <li>Sửa lỗi lưu skin trong khi mình ấn nút hủy 👁👄👁</li>
+                        </ul>
+                    </div>
+                    <br>
+
+                </article>
+            </div>
+        </article>
+
         <article id="2021-10-01" class="articles">
             <div class="box">
                 <article>
@@ -43,7 +111,7 @@
                     <div class="context">
                         <ul>
                             <li>Hiệu chỉnh website</li>
-                            <li>Đã thêm <sp>esx_inventoryhud_trunk</sp></li>
+                            <li>Đã thêm <a>esx_inventoryhud_trunk</a></li>
                         </ul>
                     </div>
                     <br>
@@ -51,7 +119,7 @@
                     <div class="sub-title" >[THAY ĐỔI]</div>
                     <div class="context">
                         <ul>
-                            <li>Thêm thông tin cân nặng vào HUD <sp>esx_inventoryhud</sp> để cho người chơi tiện xếp đồ vào cốp xe</li>
+                            <li>Thêm thông tin cân nặng vào HUD <a>esx_inventoryhud</a> để cho người chơi tiện xếp đồ vào cốp xe</li>
                         </ul>
                     </div>
                     <br>
@@ -59,7 +127,6 @@
                     <div class="sub-title" >[WIP]</div>
                     <div class="context">
                         <ul>
-                            <li><span style="text-decoration: line-through;">Chỉnh lỗi túi đồ người chơi không đồng bộ với database, thông tin thêm ở dưới mục [BUG] <egg> Khi thêm, bớt, chỉnh sửa, xóa trực tiếp từ database</egg></span></li>
                             <li>Thêm popup cho website, ấn vào <sp>script</sp> nào đó sẽ hiện thông tin cơ bản</li>
                         </ul>
                     </div>
@@ -81,10 +148,7 @@
         
                     <div class="sub-title" >[BUG]</div>
                     <div class="context">
-                        <ul>
-                            <li><span style="text-decoration: line-through;">Lỗi lấy thông tin người chơi không theo thời gian thực trên database, <egg>chỉnh trong database ví dụ `inventory` từ {"water":4} thành {"water":10} mà trong game, thậm chí là server cũng vẫn nhận 4, tương tự cho loadout</egg></span></li>
-                            <li>Không phải lỗi mà mỗi người chơi tự giữ thông tin dữ liệu của mình khá tách biệt với database</li>
-                        </ul>
+
                     </div>
                     <br>
         
@@ -123,8 +187,7 @@
                         <ul>
                             <li>Thay đổi cơ chế túi đồ, thêm limit cho từng item, <egg>chỉ được mang số lượng trong giới hạn cho phép</egg></li>
                             <li>Bỏ teleport khi cất xe trong <sp>sas_garage</sp></li>
-                            <li>Bỏ teleport khi vào cửa hàng mua xe trong <sp>renzu_vehicleshop</sp>, thay vào đó chỉ dùng camera</li>
-                            <li>Bỏ ghi tên mình ở bàn chỉ huy trong <sp>renzu_jobs</sp></li>
+                            <li>Bỏ teleport khi vào cửa hàng mua xe trong <a>renzu_vehicleshop</a>, thay vào đó chỉ dùng camera</li>
                         </ul>
                     </div>
                     <br>
@@ -157,7 +220,7 @@
                     <div class="sub-title" >[BUG]</div>
                     <div class="context">
                         <ul>
-                            <li>Khi người chơi thoát trong lúc đang Test Drive trong <sp>renzu_vehicleshop</sp>, phương tiện không despawn</li>
+                            <li>Khi người chơi thoát trong lúc đang Test Drive trong <a>renzu_vehicleshop</a>, phương tiện không despawn</li>
                         </ul>
                     </div>
                     <br>
@@ -165,7 +228,7 @@
                     <div class="sub-title" >[FIXED BUG]</div>
                     <div class="context">
                         <ul>
-                            <li>Đã sửa bug nhận thông báo từ <sp>dopeNotify2</sp> khi người khác thanh toán chuộc xe, <egg>Bạn đã trả xxxx</egg></li>
+                            <li>Đã sửa bug nhận thông báo từ <a>dopeNotify2</a> khi người khác thanh toán chuộc xe, <egg>Bạn đã trả xxxx</egg></li>
                         </ul>
                     </div>
                     <br>

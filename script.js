@@ -1,32 +1,90 @@
-var articles    = null
-var datePicker  = null
-var blankLog    = null
-var contextList = null
-var itemsList    = null
-var heroText    = null
-var title1      = null
-var title2      = null
+var articles        = null
+var datePicker      = null
+var blankLog        = null
+var contextList     = null
+var itemsList       = null
+var heroText        = null
+var title1          = null
+var title2          = null
+var scriptList      = null
+
+var refTitles = {
+    add: 'THÊM',
+    ch: 'THAY ĐỔI',
+    wip: 'WIP',
+    csder: 'CÂN NHẮC',
+    dmp: 'ĐÃ BỎ',
+    kbug: 'BUG',
+    fbug: 'FIXED BUG'
+}
+
+var scriptLinks = {
+    renzu_vehicleshop: 'https://forum.cfx.re/t/release-renzu-vehicleshop/3997447',
+    renzu_jobs: 'https://forum.cfx.re/t/renzu-jobs-job-basic-need-boss-crafting-shop-garage-vehicleshop-armory/4751253',
+    Nakres_objespawns: 'https://forum.cfx.re/t/free-object-spawn-standalone/4757038',
+    vMenu: 'https://forum.cfx.re/t/vmenu/88868',
+    esx_inventoryhud_trunk: 'https://github.com/Trsak/esx_inventoryhud_trunk',
+    esx_inventoryhud: 'https://github.com/Trsak/esx_inventoryhud',
+    rkl_clothes: 'ttps://forum.cfx.re/t/rkl-clothing-with-any-clothing-shop-meta-data-item/4759094',
+    vSync: 'https://forum.cfx.re/t/vsync-v1-4-0-simple-weather-and-time-sync/49710',
+    CTF: 'https://forum.cfx.re/t/capture-the-flag-gamemode-ctf/4765988',
+    dopeNotify2: 'https://forum.cfx.re/t/release-paid-sodope-notify-standalone/3883357',
+    dopeRPChat: 'https://forum.cfx.re/t/release-paid-sodope-3dme-3ddo-3dmed/3877323',
+}
 
 document.addEventListener("DOMContentLoaded", function(event) {
-    articles    = document.getElementsByClassName('articles')
-    blankLog    = document.getElementById('404');
-    datePicker  = document.querySelector('#datePicker')
-    contextList = document.querySelectorAll('.context')
-    itemsList    = document.querySelectorAll('li')
+    articles        = document.getElementsByClassName('articles');
+    blankLog        = document.getElementById('404');
+    // bugLog          = document.getElementById('bugs');
+    // scriptLog       = document.getElementById('wips');
+    
+    datePicker      = document.querySelector('#datePicker');
+    contextList     = document.querySelectorAll('.context');
+    itemsList       = document.querySelectorAll('li');
+    scriptList      = document.querySelectorAll('a');
+    refList         = document.querySelectorAll('sp');
 
-    heroText     = document.getElementsByClassName("hero-text")[0];
-    title1       = heroText.querySelector('#hero1');
-    title2       = heroText.querySelector('#hero2');
+    heroText        = document.getElementsByClassName("hero-text")[0];
+    title1          = heroText.querySelector('#hero1');
+    title2          = heroText.querySelector('#hero2');
+
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = yyyy + '-' + mm + '-' + dd;
+    datePicker.value = today;
 
     //This will add dates to headers with value == ids
     for (var i = 0, item; item = articles[i]; i++) {
         var id = item.getAttribute('id');
         
         if (id) {
-            if (id == '404') {break;}
+            if (id == '404') {continue;}
             var article = item.querySelector('.header');
             article.innerHTML = id;
         }
+    }
+
+    //This will automatically add links into scripts (<sp> tags)
+    for (var i = 0, item; item = scriptList[i]; i++) {
+        var blank = isBlank(item.innerHTML);
+        if (!blank) {
+            var innerHTMLString = item.innerHTML;
+            //console.log(scriptLinks[innerHTMLString]);
+            if (item.href == '') {
+                item.href = scriptLinks[innerHTMLString];
+            }
+        } 
+    }
+
+    //This will automatically create ref titles
+    for (var i = 0, item; item = refList[i]; i++) {
+        var blank = isBlank(item.innerHTML);
+        if (blank) {
+            var itemClass = item.getAttribute('class')
+            item.innerHTML = refTitles[itemClass]
+        } 
     }
 
     //If blank then insert ul>li>none
@@ -41,6 +99,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         var date = event.target.value;
         search(date);
     })
+
+    // search(today);
 
     //Add listener on resize event
     window.addEventListener('resize', function(event) {
@@ -173,11 +233,17 @@ function search(date) {
     //If not found insert no changelog with the title as date
     if (!found) {
         blankLog.querySelector('.header').innerHTML = date;
-        blankLog.querySelector('.sub-title').innerHTML = "<nolog>[No Changelog]</nolog>";
+        blankLog.querySelector('.sub-title').innerHTML = "<nolog>[No log here]</nolog>";
         blankLog.style.display = "block";
+
+        // bugLog.style.display = "none";
+        // scriptLog.style.display = "none";
     }
     else {
         blankLog.style.display = "none";
+
+        // bugLog.style.display = "block";
+        // scriptLog.style.display = "block";
     }
 }
 

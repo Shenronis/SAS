@@ -166,6 +166,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin-top: 12px;
     color: rgb(150, 150, 150);
 }
+.articles .sub-title .bug {
+    text-transform: capitalize;
+}
 .articles .sub-title nolog {
     color:white;
     text-shadow: 0 0 0.05em #fff, 0 0 0.3em #fe3f05, 0 0 0.6em #fe0505;
@@ -176,13 +179,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding-left: 2vh;
     padding-top: 1vh;
 }
-.articles .context a {
-    color: white;
-    text-shadow: 0 0 0.025em #fff, 0 0 0.2em #0547fe, 0 0 0.3em #05ccfe;
-}
+.articles .context a,
 .articles .context sp {
     color: white;
     text-shadow: 0 0 0.025em #fff, 0 0 0.2em #0547fe, 0 0 0.3em #05ccfe;
+}
+.articles .context .add,
+.articles .context .ch,
+.articles .context .wip,
+.articles .context .csder,
+.articles .context .kbug,
+.articles .context .fbug {
+    color: white;
+    text-shadow: 0 0 0.025em #fff, 0 0 0.2em #8605fe, 0 0 0.3em #8e05fe;
 }
 .articles .context sp::before,
 .articles .context a::before {
