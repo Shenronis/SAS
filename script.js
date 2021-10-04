@@ -74,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
             //console.log(scriptLinks[innerHTMLString]);
             if (item.href == '') {
                 item.href = scriptLinks[innerHTMLString];
+                item.target = '_blank';
+                item.rel = "noopener noreferrer"
             }
         } 
     }
