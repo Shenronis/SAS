@@ -30,6 +30,7 @@ var scriptLinks = {
     CTF: 'https://forum.cfx.re/t/capture-the-flag-gamemode-ctf/4765988',
     dopeNotify2: 'https://forum.cfx.re/t/release-paid-sodope-notify-standalone/3883357',
     dopeRPChat: 'https://forum.cfx.re/t/release-paid-sodope-3dme-3ddo-3dmed/3877323',
+    esx_advancedholdup: 'https://github.com/HumanTree92/esx_advancedholdup',
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
