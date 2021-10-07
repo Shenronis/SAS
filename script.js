@@ -30,7 +30,11 @@ var scriptLinks = {
     CTF: 'https://forum.cfx.re/t/capture-the-flag-gamemode-ctf/4765988',
     dopeNotify2: 'https://forum.cfx.re/t/release-paid-sodope-notify-standalone/3883357',
     dopeRPChat: 'https://forum.cfx.re/t/release-paid-sodope-3dme-3ddo-3dmed/3877323',
-    esx_advancedholdup: 'https://github.com/HumanTree92/esx_advancedholdup',
+    gcphone_reignited: 'https://forum.cfx.re/t/release-re-ignited-gcphone-esx-1-1-1-2-final/1517438',
+    xSpeedometer: 'https://forum.cfx.re/t/release-xspeedometer-tesla-styled-speedometer-for-fivem/974516',
+    pma_voice: 'https://forum.cfx.re/t/release-voip-pma-voice-mumble-voip-alternative/1896255',
+    Eclipse_Job_Electrician: 'https://forum.cfx.re/t/esx-paid-eclipse-job-electrician/4765233',
+    BulgaR_shooting_range: 'https://forum.cfx.re/t/bulgar-shooting-range-practical-exam-esx/4766310',
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
