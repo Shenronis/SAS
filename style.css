@@ -122,8 +122,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     }
 }
 .search-wrapper button:active {
-        background-color: rgb(0, 0, 0);
-        color:white;
+    background-color: rgb(0, 0, 0);
+    color:white;
 }
 /*--== Search End==--*/
 
@@ -141,25 +141,44 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin: 0;
     border-radius: 12px;
 }
+.articles .article-header {
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
 .articles .header {
     display:inline;
     font-size: 2em;
     font-weight: bold;
     font-style: italic;
-    margin-bottom: 20px;
     display:flex;
     align-items: center;
     text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
 }
-.articles .header .quicklink {
-    background-color: white;
-    color: black;
-    margin: 0 12px 0;
-    height: 24px;
-    width: auto;
-    padding: 2px 12px 2px 12px;
-    border-radius: 4px;
-    border: 0px;
+.articles .article-header button {
+    border: 0;
+    border-radius: 4rem;
+    box-shadow: 0 0 0.02rem #fff, 0 0 0.3rem #fff;
+    padding: 0.2rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 3rem;
+    transition: all .1s ease-in-out;
+}
+@media(hover: hover) and (pointer: fine) {
+    .articles .article-header button:hover {
+        background-color: rgb(0, 0, 0);
+        color:white;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .articles .article-header {
+        justify-content: space-between;
+    }
+    .articles .article-header button:active {
+        background-color: rgb(0, 0, 0);
+        color:white;
+    }
 }
 .articles .sub-title {
     font-size: 1.2em;
@@ -235,9 +254,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*---== Article End ==-- */
 
 /*--== Modal ==--*/
-.disable-scroll {
-    overflow: hidden;
-}
 .bg-modal {
     width: 100%;
     height: 100%;
@@ -250,7 +266,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 .bg-modal .modal-content {
     width: 50rem;
-    height: 25rem;
-    background-color: lightgrey;
+    height: 30rem;
+    background-color: grey;
     border-radius: 6px;
+}
+@media only screen and (max-width: 600px) {
+    .bg-modal .modal-content {
+        margin: 0 2rem 0 2rem;
+    }
 }

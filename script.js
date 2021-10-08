@@ -35,6 +35,9 @@ var scriptLinks = {
     pma_voice: 'https://forum.cfx.re/t/release-voip-pma-voice-mumble-voip-alternative/1896255',
     Eclipse_Job_Electrician: 'https://forum.cfx.re/t/esx-paid-eclipse-job-electrician/4765233',
     BulgaR_shooting_range: 'https://forum.cfx.re/t/bulgar-shooting-range-practical-exam-esx/4766310',
+    okokBilling: 'https://forum.cfx.re/t/okokbilling-qbcore-esx-paid/4319744',
+    radialmenu: 'https://forum.cfx.re/t/release-radialmenu-configurable-menu-for-chat-commands-using-wheelnav-js/543690',
+    esx_menu_default_redesign: 'https://forum.cfx.re/t/esx-esx-menu-default-redesign/3714109',
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -67,7 +70,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if (id) {
             if (id == '404') {continue;}
             var article = item.querySelector('.header');
+            var articlesection = item.querySelector('.article-header')
+            var articlebtn = document.createElement("button")
+            articlebtn.innerHTML = '<i class="fas fa-paper-plane"></i>'
             article.innerHTML = id;
+            articlesection.appendChild(articlebtn)
         }
     }
 
