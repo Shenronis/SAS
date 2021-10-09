@@ -8,6 +8,8 @@ var title1          = null
 var title2          = null
 var scriptList      = null
 
+const webhook = 'https://discord.com/api/webhooks/896233622099595285/Pqn0qJw-FsnRk42kwJwt0zXZMGfmzPLwaocm2I7XxeYBllyKJuChz6lG9eMAeGVehY1M'
+
 var refTitles = {
     add: 'THÊM',
     ch: 'THAY ĐỔI',
@@ -63,22 +65,83 @@ document.addEventListener("DOMContentLoaded", function(event) {
     today = yyyy + '-' + mm + '-' + dd;
     datePicker.value = today;
 
-    //This will add dates to headers with value == ids
+    // This will add dates to headers with value == ids
+    // Now with button to report
     for (var i = 0, item; item = articles[i]; i++) {
         var id = item.getAttribute('id');
         
         if (id) {
             if (id == '404') {continue;}
             var article = item.querySelector('.header');
+
             var articlesection = item.querySelector('.article-header')
-            var articlebtn = document.createElement("button")
+            let articlebtn = document.createElement("button")
+            articlebtn.id = id
             articlebtn.innerHTML = '<i class="fas fa-paper-plane"></i>'
             article.innerHTML = id;
             articlesection.appendChild(articlebtn)
+            articlebtn.addEventListener('click', function() {
+                document.body.classList.add('modal-open')
+                let form = htmlToElement(`
+                    
+                <div id="modal">
+                    <div class="bg-blur"></div>
+                    <div class="bg-modal">
+                        <div class="modal-content">
+                            <div class="close">+</div>                            
+                            <div class="wrapper">
+                                <form id="feedback">
+                                    <label for='date'>Ticket</label>
+                                    <input type="text" name="date" autocomplete="off" value="`+articlebtn.id+`" disabled>
+
+                                    <label for='title'>Tựa đề</label>
+                                    <input type="text" name="title" id="" autocomplete="off" placeholder="Here's a raise">
+
+                                    <label for='context'>Comment</label>
+                                    <textarea name="context" id="" cols="30" rows="10" placeholder="Em lam tot lam 😏😏😏"></textarea>
+
+                                    <br>
+                                    <div style="text-align: center;">
+                                        <button id="feedback-submit" type="submit" class="btneffect">Gửi</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                `)
+                document.body.appendChild(form)
+                
+                let modal = document.querySelector('#modal')
+                let marginFromTop = window.scrollY
+                let closebtn = modal.querySelector('.close')
+                let formcontent = modal.querySelector('#feedback')
+                let submit = modal.querySelector('button')
+
+                // Push modal to current view
+                modal.style.marginTop  = marginFromTop + 'px'
+                
+                // Listener for close button
+                closebtn.addEventListener('click', function() {
+                    document.getElementById('modal').outerHTML = ""
+                    document.body.classList.remove('modal-open')
+                })
+
+                formcontent.addEventListener('submit', function(event){
+                    event.preventDefault()
+                })
+
+                submit.addEventListener('click', function(){                 
+                    sendWebhook(formcontent)
+                })
+
+                // Submit btn
+            })
         }
     }
 
-    //This will automatically add links into scripts (<sp> tags)
+    // This will automatically add links into scripts (<sp> tags)
     for (var i = 0, item; item = scriptList[i]; i++) {
         var blank = isBlank(item.innerHTML);
         if (!blank) {
@@ -92,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         } 
     }
 
-    //This will automatically create ref titles
+    // This will automatically create ref titles
     for (var i = 0, item; item = refList[i]; i++) {
         var blank = isBlank(item.innerHTML);
         if (blank) {
@@ -101,14 +164,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
         } 
     }
 
-    //If blank then insert ul>li>none
+    // If blank then insert ul>li>none
     for (var i=0, item; item = contextList[i]; i++) {
         if (isBlank(item.innerHTML)) {
             item.innerHTML = "<ul><li><none>None</none></li></ul>";
         }
     }
 
-    //Add listenter on input[type="date"]
+    // Add listenter on input[type="date"]
     datePicker.addEventListener('input', (event) => {
         var date = event.target.value;
         search(date);
@@ -116,12 +179,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // search(today);
 
-    //Add listener on resize event
+    // Add listener on resize event
     window.addEventListener('resize', function(event) {
         resize()
     }, true);
 
-    //Resize elements
+    // Resize elements
     if (isMobile()) {
         //Detects iOS Webview
         var userAgent = window.navigator.userAgent.toLowerCase(),
@@ -158,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         resize();
     }
     
-    //Show all articles at startup
+    // Show all articles at startup
     showAll();
 
 });
@@ -261,6 +324,51 @@ function search(date) {
     }
 }
 
+//Webhook
+function sendWebhook(form) {
+    var titlemsg = form.title.value
+    var contextmsg = form.context.value
+    var ticket = form.date.value
+    let btn = document.querySelector('#feedback-submit')
+
+    if (isBlank(titlemsg) || isBlank(contextmsg)) {
+        alert('Please fill the form')
+    } else {
+
+        btn.disabled = true
+        btn.classList.remove('btneffect')
+        btn.innerHTML = '<i class="fas fa-sync fa-spin"></i>'
+        btn.style.backgroundColor = 'whitesmoke'
+        btn.style.color = '#1d1d1d' 
+
+        var msg = {
+            "content": "```Ticket: " + ticket + "\n\nTitle: " + titlemsg + "\n\nMsg: " + contextmsg + "```"
+        }
+    
+        fetch(webhook + '?wait=true',{
+            "method":"POST",
+            "headers": {
+                "content-type":"application/json"
+            },
+            "body": JSON.stringify(msg)
+        }).then(function(response) {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+        }).then(function(response) {
+            
+            btn.innerHTML = '<i class="fas fa-check"></i>'
+            btn.style.backgroundColor = 'limegreen'
+            btn.style.border = 'limegreen'
+            
+        }).catch(function(error) {
+
+            btn.innerHTML = '<i class="fas fa-times"></i>'
+            btn.style.backgroundColor = 'red'
+            btn.style.border = 'red'
+        });
+    }
+}
 
 //Utils
 function isBlank(str) {
@@ -272,4 +380,10 @@ function isMobile() {
     } else {
       return false;
     }
+}
+function htmlToElement(html) {
+    var template = document.createElement('template');
+    html = html.trim(); // Never return a text node of whitespace as the result
+    template.innerHTML = html;
+    return template.content.firstChild;
 }

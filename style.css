@@ -15,6 +15,9 @@ body, html {
     background-color: black;
 }
 
+textarea {
+    resize:none;
+}
 
 /*--== Header ==--*/
 .hero-text {
@@ -146,7 +149,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-items: center;
     margin-bottom: 20px;
 }
-.articles .header {
+.articles .header,
+.modal-content .header {
     display:inline;
     font-size: 2em;
     font-weight: bold;
@@ -154,6 +158,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     display:flex;
     align-items: center;
     text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+    color: #eee;
 }
 .articles .article-header button {
     border: 0;
@@ -174,6 +179,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 @media only screen and (max-width: 600px) {
     .articles .article-header {
         justify-content: space-between;
+    }
+    .articles .article-header button {
+        margin-left: 1rem;
     }
     .articles .article-header button:active {
         background-color: rgb(0, 0, 0);
@@ -254,6 +262,24 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*---== Article End ==-- */
 
 /*--== Modal ==--*/
+body.modal-open {
+    overflow: hidden;
+}
+#modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+}
+.bg-blur {
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0,0,0,0.2);
+    position: absolute;
+    top:0;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
 .bg-modal {
     width: 100%;
     height: 100%;
@@ -264,14 +290,87 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: center;
     align-items: center;
 }
-.bg-modal .modal-content {
-    width: 50rem;
-    height: 30rem;
-    background-color: grey;
+.modal-content {
+    width: fit-content;
+    height: fit-content;
+    background-color: #1d1d1d;
+    border-radius: 1rem;
+    position: relative;
+    padding: 1.5rem;
+    color: whitesmoke;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0.02rem #fff, 0 0 0.5rem #fff;
+}
+.modal-content .close {
+    position: relative;
+    top: 0;
+    float: right;
+    font-size: 2rem;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+.modal-content .wrapper {
+    margin: 1.5rem auto;
+}
+.modal-content label {
+    display: block;
+    font-size: 1rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    margin-bottom: 0.4rem;
+    color: lightgrey;
+    font-style: oblique;
+}
+.modal-content input,
+.modal-content textarea {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    box-sizing: border-box;
+    border: 3px solid #fff;
     border-radius: 6px;
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    max-width: 20rem;
+    width: 20rem;
+}
+.modal-content input {
+    max-height: 2rem;
+}
+.modal-content input[name='date']:disabled {
+    background-color: transparent;
+    border:0;
+    font-size:1.5rem;
+    color: white;
+}
+.modal-content textarea {
+    max-height: 8rem;
+}
+.modal-content button {
+    width: 5rem;
+    height: 3rem;
+    border-radius: 6px;
+    background-color: #1d1d1d;
+    border: 2px solid #fff;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.1s ease-in-out;
+}
+
+@media(hover: hover) and (pointer: fine) {
+    .modal-content button.btneffect:hover {
+        background-color: whitesmoke;
+        color: black;
+        font-size: 1.05rem;
+        transform: scale(1.1)
+    }
 }
 @media only screen and (max-width: 600px) {
     .bg-modal .modal-content {
-        margin: 0 2rem 0 2rem;
+        transform: scale(0.8)
+    }
+    .modal-content button.btneffect:active {
+        background-color: whitesmoke;
+        color: black;
+        font-size: 1.05rem;
+        transform: scale(1.1)
     }
 }
