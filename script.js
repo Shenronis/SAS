@@ -119,6 +119,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 let formcontent = modal.querySelector('#feedback')
                 let submit = modal.querySelector('button')
 
+                modal.querySelectorAll('input').forEach(elemt => {
+                    elemt.onfocus = function () {
+                        window.scrollTo(0, 0);
+                        document.body.scrollTop = 0;
+                    }
+                })
+
+                modal.querySelector('textarea').addEventListener('focus', function(){
+                    window.scrollTo(0, 0);
+                    document.body.scrollTop = 0;
+                })
+
                 // Push modal to current view
                 modal.style.marginTop  = marginFromTop + 'px'
                 
@@ -217,6 +229,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
             }
         }
+
+        document.ontouchmove = function(e){
+            e.preventDefault();
+        }
+
     } else {
         resize();
     }

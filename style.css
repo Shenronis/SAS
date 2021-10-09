@@ -184,10 +184,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     .articles .article-header button {
         margin-left: 1rem;
     }
-    .articles .article-header button:active {
-        background-color: rgb(0, 0, 0);
-        color:white;
-    }
+}
+.articles .article-header button:active {
+    background-color: rgb(0, 0, 0);
+    color:white;
 }
 .articles .sub-title {
     font-size: 1.2em;
