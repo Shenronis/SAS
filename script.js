@@ -119,18 +119,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 let formcontent = modal.querySelector('#feedback')
                 let submit = modal.querySelector('button')
 
-                modal.querySelectorAll('input').forEach(elemt => {
-                    elemt.onfocus = function () {
-                        window.scrollTo(0, 0);
-                        document.body.scrollTop = 0;
-                    }
-                })
-
-                modal.querySelector('textarea').addEventListener('focus', function(){
-                    window.scrollTo(0, 0);
-                    document.body.scrollTop = 0;
-                })
-
                 // Push modal to current view
                 modal.style.marginTop  = marginFromTop + 'px'
                 
@@ -146,6 +134,25 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
                 submit.addEventListener('click', function(){                 
                     sendWebhook(formcontent)
+                })
+
+                var pleasehelp = '100px'
+                modal.querySelectorAll('input').forEach(elemt => {
+                    
+                    elemt.onfocus = function () {
+                        modal.marginTop = modal.marginTop - pleasehelp
+                    }
+                    elemt.onblur = function () {
+                        modal.marginTop = modal.marginTop + pleasehelp
+                    }
+                })
+
+                modal.querySelector('textarea').addEventListener('focus', function(){
+                    modal.marginTop = modal.marginTop - pleasehelp
+                })
+
+                modal.querySelector('textarea').addEventListener('blur', function(){
+                    modal.marginTop = modal.marginTop + pleasehelp
                 })
 
                 // Submit btn
