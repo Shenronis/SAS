@@ -75,12 +75,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
             var article = item.querySelector('.header');
 
             var articlesection = item.querySelector('.article-header')
-            
+            article.innerHTML = id;
             if (!isMobile()) {
-                let articlebtn = document.createElement("button")
+            let articlebtn = document.createElement("button")
             articlebtn.id = id
             articlebtn.innerHTML = '<i class="fas fa-paper-plane"></i>'
-            article.innerHTML = id;
             articlesection.appendChild(articlebtn)
             articlebtn.addEventListener('click', function() {
                 document.body.classList.add('modal-open')
