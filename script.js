@@ -75,7 +75,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             var article = item.querySelector('.header');
 
             var articlesection = item.querySelector('.article-header')
-            let articlebtn = document.createElement("button")
+            
+            if (!isMobile()) {
+                let articlebtn = document.createElement("button")
             articlebtn.id = id
             articlebtn.innerHTML = '<i class="fas fa-paper-plane"></i>'
             article.innerHTML = id;
@@ -132,31 +134,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     event.preventDefault()
                 })
 
+                // Submit btn
                 submit.addEventListener('click', function(){                 
                     sendWebhook(formcontent)
                 })
-
-                var pleasehelp = '100px'
-                modal.querySelectorAll('input').forEach(elemt => {
-                    
-                    elemt.onfocus = function () {
-                        modal.marginTop = modal.marginTop - pleasehelp
-                    }
-                    elemt.onblur = function () {
-                        modal.marginTop = modal.marginTop + pleasehelp
-                    }
-                })
-
-                modal.querySelector('textarea').addEventListener('focus', function(){
-                    modal.marginTop = modal.marginTop - pleasehelp
-                })
-
-                modal.querySelector('textarea').addEventListener('blur', function(){
-                    modal.marginTop = modal.marginTop + pleasehelp
-                })
-
-                // Submit btn
+                
             })
+            }
         }
     }
 
@@ -236,11 +220,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
             }
         }
-
-        document.ontouchmove = function(e){
-            e.preventDefault();
-        }
-
     } else {
         resize();
     }
