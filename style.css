@@ -169,6 +169,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 1.5rem;
     margin-left: 3rem;
     transition: all .1s ease-in-out;
+    background-color: #fff;
 }
 @media(hover: hover) and (pointer: fine) {
     .articles .article-header button:hover {
