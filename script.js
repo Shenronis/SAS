@@ -40,6 +40,13 @@ var scriptLinks = {
     okokBilling: 'https://forum.cfx.re/t/okokbilling-qbcore-esx-paid/4319744',
     radialmenu: 'https://forum.cfx.re/t/release-radialmenu-configurable-menu-for-chat-commands-using-wheelnav-js/543690',
     esx_menu_default_redesign: 'https://forum.cfx.re/t/esx-esx-menu-default-redesign/3714109',
+    esx_constructorjob: 'https://forum.cfx.re/t/paid-esx-constructor-job/3354360',
+    CrewSystem: 'https://forum.cfx.re/t/release-crew-system-with-player-blip-paid/2318681',
+    scrapman_job: 'https://github.com/ArielZ123/ScrapMan-Job',
+    aquiver_3rd_poker: 'https://forum.cfx.re/t/standalone-or-esx-paid-aquiver-three-card-poker/3378769',
+    FiveM_Streamer: 'https://www.youtube.com/watch?v=P0wE3M5j5KQ',
+    renzu_customs: 'https://forum.cfx.re/t/renzu-customs-unique-and-advanced-mechanic-tuning-lscustom-lscustoms/4755869',
+    
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
