@@ -46,7 +46,7 @@ var scriptLinks = {
     aquiver_3rd_poker: 'https://forum.cfx.re/t/standalone-or-esx-paid-aquiver-three-card-poker/3378769',
     FiveM_Streamer: 'https://www.youtube.com/watch?v=P0wE3M5j5KQ',
     renzu_customs: 'https://forum.cfx.re/t/renzu-customs-unique-and-advanced-mechanic-tuning-lscustom-lscustoms/4755869',
-    
+    renzu_clothes: 'https://forum.cfx.re/t/renzu-clothes-advanced-clotheshop-and-wardrobe/4769462'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
