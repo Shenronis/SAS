@@ -46,7 +46,15 @@ var scriptLinks = {
     aquiver_3rd_poker: 'https://forum.cfx.re/t/standalone-or-esx-paid-aquiver-three-card-poker/3378769',
     FiveM_Streamer: 'https://www.youtube.com/watch?v=P0wE3M5j5KQ',
     renzu_customs: 'https://forum.cfx.re/t/renzu-customs-unique-and-advanced-mechanic-tuning-lscustom-lscustoms/4755869',
-    renzu_clothes: 'https://forum.cfx.re/t/renzu-clothes-advanced-clotheshop-and-wardrobe/4769462'
+    renzu_clothes: 'https://forum.cfx.re/t/renzu-clothes-advanced-clotheshop-and-wardrobe/4769462',
+    renzu_scoreboard: 'https://forum.cfx.re/t/release-renzu-scoreboard-unique-ui-roleplay-purpose/4243946',
+    kc_tricks: 'https://forum.cfx.re/t/standalone-motocross-tricks-kc-tricks-free/4773158',
+    Prefech_playTime: 'https://forum.cfx.re/t/prefech-playtime/4772300',
+    gcphone: 'https://forum.cfx.re/t/release-re-ignited-gcphone-esx-1-1-1-2-final/1517438',
+    Death_System: 'https://forum.cfx.re/t/release-free-dojrp-based-advanced-death-system/4502892/9',
+    XNLRankBar: 'https://forum.cfx.re/t/release-xnlrankbar-fully-working-original-gta-rankbar-xp-bar-natively-with-original-gta-levels/318839',
+    cuchi_moneyStats: 'https://forum.cfx.re/t/free-money-statistics-statistics-about-money-on-the-server/4769000',
+    
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
