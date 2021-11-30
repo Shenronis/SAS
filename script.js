@@ -54,7 +54,8 @@ var scriptLinks = {
     Death_System: 'https://forum.cfx.re/t/release-free-dojrp-based-advanced-death-system/4502892/9',
     XNLRankBar: 'https://forum.cfx.re/t/release-xnlrankbar-fully-working-original-gta-rankbar-xp-bar-natively-with-original-gta-levels/318839',
     cuchi_moneyStats: 'https://forum.cfx.re/t/free-money-statistics-statistics-about-money-on-the-server/4769000',
-    
+    Seatbelt: 'https://forum.cfx.re/t/release-seatbelt-updated/449900',
+    esx_jail: 'https://forum.cfx.re/t/release-esx-jail/82896'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
