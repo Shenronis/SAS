@@ -55,7 +55,8 @@ var scriptLinks = {
     XNLRankBar: 'https://forum.cfx.re/t/release-xnlrankbar-fully-working-original-gta-rankbar-xp-bar-natively-with-original-gta-levels/318839',
     cuchi_moneyStats: 'https://forum.cfx.re/t/free-money-statistics-statistics-about-money-on-the-server/4769000',
     Seatbelt: 'https://forum.cfx.re/t/release-seatbelt-updated/449900',
-    esx_jail: 'https://forum.cfx.re/t/release-esx-jail/82896'
+    esx_jail: 'https://forum.cfx.re/t/release-esx-jail/82896',
+    checkdeathcause:'https://forum.cfx.re/t/esx-release-esx-checkdeathcause/108636'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
