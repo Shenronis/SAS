@@ -56,7 +56,8 @@ var scriptLinks = {
     cuchi_moneyStats: 'https://forum.cfx.re/t/free-money-statistics-statistics-about-money-on-the-server/4769000',
     Seatbelt: 'https://forum.cfx.re/t/release-seatbelt-updated/449900',
     esx_jail: 'https://forum.cfx.re/t/release-esx-jail/82896',
-    checkdeathcause:'https://forum.cfx.re/t/esx-release-esx-checkdeathcause/108636'
+    checkdeathcause:'https://forum.cfx.re/t/esx-release-esx-checkdeathcause/108636',
+    loffe_animations: 'https://github.com/Loffes/animations'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
