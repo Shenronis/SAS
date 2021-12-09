@@ -57,7 +57,8 @@ var scriptLinks = {
     Seatbelt: 'https://forum.cfx.re/t/release-seatbelt-updated/449900',
     esx_jail: 'https://forum.cfx.re/t/release-esx-jail/82896',
     checkdeathcause:'https://forum.cfx.re/t/esx-release-esx-checkdeathcause/108636',
-    loffe_animations: 'https://github.com/Loffes/animations'
+    loffe_animations: 'https://github.com/Loffes/animations',
+    trew_hud: 'https://forum.cfx.re/t/release-trew-hud-ui-a-lightweight-hud-for-esx-vrp-and-vrpex/890303'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
