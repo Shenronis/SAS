@@ -58,7 +58,8 @@ var scriptLinks = {
     esx_jail: 'https://forum.cfx.re/t/release-esx-jail/82896',
     checkdeathcause:'https://forum.cfx.re/t/esx-release-esx-checkdeathcause/108636',
     loffe_animations: 'https://github.com/Loffes/animations',
-    trew_hud: 'https://forum.cfx.re/t/release-trew-hud-ui-a-lightweight-hud-for-esx-vrp-and-vrpex/890303'
+    trew_hud: 'https://forum.cfx.re/t/release-trew-hud-ui-a-lightweight-hud-for-esx-vrp-and-vrpex/890303',
+    cui_wardrobe: 'https://forum.cfx.re/t/release-cleanui-wardrobe/2104620'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
