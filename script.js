@@ -59,7 +59,9 @@ var scriptLinks = {
     checkdeathcause:'https://forum.cfx.re/t/esx-release-esx-checkdeathcause/108636',
     loffe_animations: 'https://github.com/Loffes/animations',
     trew_hud: 'https://forum.cfx.re/t/release-trew-hud-ui-a-lightweight-hud-for-esx-vrp-and-vrpex/890303',
-    cui_wardrobe: 'https://forum.cfx.re/t/release-cleanui-wardrobe/2104620'
+    cui_wardrobe: 'https://forum.cfx.re/t/release-cleanui-wardrobe/2104620',
+    AntiPeak: 'https://forum.cfx.re/t/free-standalone-anti-third-person-aim-glitches-left-right-peak/4787786',
+    PolyZone: 'https://github.com/mkafrin/PolyZone'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
