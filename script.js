@@ -63,7 +63,8 @@ var scriptLinks = {
     AntiPeak: 'https://forum.cfx.re/t/free-standalone-anti-third-person-aim-glitches-left-right-peak/4787786',
     PolyZone: 'https://github.com/mkafrin/PolyZone',
     CayoTwoIslands: 'https://forum.cfx.re/t/releases-free-cayotwoislands/4799534',
-    mb_begging: 'https://forum.cfx.re/t/free-esx-mb-begging/4790560'
+    mb_begging: 'https://forum.cfx.re/t/free-esx-mb-begging/4790560',
+    esx_carthief: 'https://github.com/KlibrDM/esx_carthief'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
