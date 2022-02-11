@@ -64,7 +64,8 @@ var scriptLinks = {
     PolyZone: 'https://github.com/mkafrin/PolyZone',
     CayoTwoIslands: 'https://forum.cfx.re/t/releases-free-cayotwoislands/4799534',
     mb_begging: 'https://forum.cfx.re/t/free-esx-mb-begging/4790560',
-    esx_carthief: 'https://github.com/KlibrDM/esx_carthief'
+    esx_carthief: 'https://github.com/KlibrDM/esx_carthief',
+    bike_rental: 'https://forum.cfx.re/t/release-esx-bike-rental-v5/116465'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
