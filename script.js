@@ -65,7 +65,9 @@ var scriptLinks = {
     CayoTwoIslands: 'https://forum.cfx.re/t/releases-free-cayotwoislands/4799534',
     mb_begging: 'https://forum.cfx.re/t/free-esx-mb-begging/4790560',
     esx_carthief: 'https://github.com/KlibrDM/esx_carthief',
-    bike_rental: 'https://forum.cfx.re/t/release-esx-bike-rental-v5/116465'
+    bike_rental: 'https://forum.cfx.re/t/release-esx-bike-rental-v5/116465',
+    mhacking: 'https://github.com/davedorm/mhacking',
+    esx_knatusblowtorch: 'https://github.com/Knaak53/esx_knatusblowtorch'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
