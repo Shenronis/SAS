@@ -67,7 +67,8 @@ var scriptLinks = {
     esx_carthief: 'https://github.com/KlibrDM/esx_carthief',
     bike_rental: 'https://forum.cfx.re/t/release-esx-bike-rental-v5/116465',
     mhacking: 'https://github.com/davedorm/mhacking',
-    esx_knatusblowtorch: 'https://github.com/Knaak53/esx_knatusblowtorch'
+    esx_knatusblowtorch: 'https://github.com/Knaak53/esx_knatusblowtorch',
+    BCall_Ilegal: 'https://forum.cfx.re/t/paid-esx-qb-illegal-missions-with-npc-interaction-v2/4825980?fbclid=IwAR2Jc8FQsMb3MOckNNzkMbjGKpQyXqXJ289ZpeCwBTcpYdMr9hsbSFGYY4c'
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
